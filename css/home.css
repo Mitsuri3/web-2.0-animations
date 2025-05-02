@@ -61,11 +61,6 @@
     animation: bounce 1s ease-out forwards;
 }
 
-@keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-
 .social-icons {
     width: 20px;
     display: flex;
@@ -146,11 +141,20 @@
     bottom: 0;
     right: 8px;
     transform: translate(0, 25px);
+    background: linear-gradient(to right, #3b3b3b 50%, rgba(198, 16, 15, 1) 50%);
+    background-size: 200% 100%;
+    animation: fillBackground 1s ease forwards paused;
 }
 
 .page_1__button_right:hover{
-
+    animation-play-state: running;
 }
+
+@keyframes fillBackground {
+    to {
+      background-position: -100% 0;
+    }
+  }
 
 
 @media (max-width: 1250px) {
