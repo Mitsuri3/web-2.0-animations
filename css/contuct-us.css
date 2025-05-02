@@ -35,6 +35,31 @@
     margin-left: 650px;
     max-width: 550px;
     max-height: 525px;
+    position: relative;
+}
+
+.contuct-us-info::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid rgba(198, 16, 15, 0.3);
+    z-index: -1;
+    animation: pulseBorder 4s infinite ease-in-out;
+    border-radius: 5px;
+}
+
+@keyframes pulseBorder {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% { 
+        transform: scale(1.02);
+        opacity: 0.8;
+    }
 }
 
 .contuct-us-title-text{
@@ -44,6 +69,25 @@
     letter-spacing: 1px;
     text-align: left;
     text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.contuct-us-title-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgba(198, 16, 15, 0.3);
+    animation: underlineGrow 4s infinite alternate;
+}
+
+@keyframes underlineGrow {
+    from { width: 0; left: 0; }
+    to { width: 100%; left: 0; }
 }
 
 .contuct-us-info-name{
@@ -146,7 +190,10 @@
     text-align: left;
 }
 
-.btn3, a.btn3 {
+.btn3 {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
     margin-top: 21px;
     display: inline-block;
     height: 43px;
@@ -162,8 +209,23 @@
 
     letter-spacing: 0%;
     text-align: center;
-    
+}
 
+.btn3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background: #9a0b0b;
+    transition: left 1s cubic-bezier(.77,.01,.46,1.06);
+    z-index: -1;
+}
+  
+.btn3, a.btn3:hover::before {
+    left: 0;
 }
 
 @media (max-width: 1025px) {
@@ -241,7 +303,7 @@
         margin-top: 10px;
         margin-left: 370px;
         max-width: 450px;
-        max-height: 525px;
+        max-height: 420px;
     }
 
     .contuct-us-title-text{
@@ -313,7 +375,7 @@
         margin-top: 10px;
         margin-left: 47px;
         max-width: 450px;
-        max-height: 525px;
+        max-height: 420px;
     }
 
     .btn3, a.btn3 {
@@ -348,6 +410,7 @@
         margin-top: 0px;
         margin-left: -2px;
         max-width: 300px;
+        max-height: 400px;
     }
     .contuct-us-title{
         margin-left: 5px;

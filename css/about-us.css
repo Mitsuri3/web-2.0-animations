@@ -167,7 +167,7 @@
     width: 100%;
     height: 100%;
     background: #9a0b0b;
-    transition: left 2s cubic-bezier(.77,.01,.46,1.06);
+    transition: left 1s cubic-bezier(.77,.01,.46,1.06);
     z-index: -1;
 }
   
