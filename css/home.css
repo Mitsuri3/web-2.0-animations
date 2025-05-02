@@ -6,9 +6,6 @@
     width: 100%;
     background-color: black;
     display: flex;
-
-    
-    
 }
 
 .container1{
@@ -49,6 +46,7 @@
     text-transform: uppercase;
     letter-spacing: 0%;
     font-size: 130px;
+    animation: bounce 1s ease-out forwards;
 }
 
 .home-heading0{
@@ -60,7 +58,13 @@
     text-transform: uppercase;
     letter-spacing: 0%;
     font-size: 130px;
+    animation: bounce 1s ease-out forwards;
 }
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
 
 .social-icons {
     width: 20px;
@@ -71,7 +75,14 @@
     margin-top: 180px;
     margin-left: 40px;
     transform: none; 
+    animation: bounce 1s ease-out forwards;
 }
+
+@keyframes bounce {
+    0% { transform: translateY(-50px); opacity: 0; }
+    70% { transform: translateY(10px); }
+    100% { transform: translateY(0); opacity: 1; }
+  }
 
 .social-networks-inst{
     writing-mode: vertical-rl;
@@ -135,6 +146,10 @@
     bottom: 0;
     right: 8px;
     transform: translate(0, 25px);
+}
+
+.page_1__button_right:hover{
+
 }
 
 
