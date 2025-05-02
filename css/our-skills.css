@@ -67,7 +67,7 @@
 
 .graphic-design-line{
     margin-top: 10.45px;
-    width: 396px;
+    width: 80%;
     height: 2px;
     background: rgb(198, 16, 15);
 }
@@ -109,7 +109,7 @@
 
 .Lead-Generation-line{
     margin-top: 11px;
-    width: 203px;
+    width: 41%;
     height: 2px;
     background: rgb(198, 16, 15);
 }
@@ -151,7 +151,7 @@
 
 .Photoshop-line{
     margin-top: 10.45px;
-    width: 347px;
+    width: 70%;
     height: 2px;
     background: rgb(198, 16, 15);
 }
@@ -193,7 +193,7 @@
 
 .Illustration-line{
     margin-top: 10.45px;
-    width: 495px;
+    width: 100%;
     height: 2px;
     background: rgb(198, 16, 15);
 }
@@ -221,6 +221,66 @@
     object-fit: contain;
     margin-left: 100px;
     margin-top: 0px
+}
+
+.our-skills-image {
+    position: relative;
+    animation: 
+        floatImage 6s infinite ease-in-out,
+        colorPulse 8s infinite alternate;
+    filter: 
+        drop-shadow(0 10px 5px rgba(198, 16, 15, 0.3));
+    transform-style: preserve-3d;
+}
+
+.our-skills-image::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(
+        135deg, 
+        rgba(198, 16, 15, 0.4) 0%, 
+        transparent 50%,
+        rgba(198, 16, 15, 0.4) 100%
+    );
+    z-index: -1;
+    animation: 
+        borderGlow 3s infinite alternate,
+        hologramScan 5s infinite linear;
+    mix-blend-mode: overlay;
+}
+
+@keyframes floatImage {
+    0%, 100% { transform: translateY(0) rotateY(0deg); }
+    25% { transform: translateY(-15px) rotateY(3deg); }
+    50% { transform: translateY(0) rotateY(0deg); }
+    75% { transform: translateY(-10px) rotateY(-3deg); }
+}
+
+@keyframes colorPulse {
+    to { filter: 
+        hue-rotate(5deg) 
+        contrast(1.1) 
+        drop-shadow(0 15px 7px rgba(198, 16, 15, 0.4));
+    }
+}
+
+@keyframes borderGlow {
+    to { 
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        opacity: 0.8;
+    }
+}
+
+@keyframes hologramScan {
+    from { background-position: 0 -100%; }
+    to { background-position: 0 200%; }
 }
 
 
