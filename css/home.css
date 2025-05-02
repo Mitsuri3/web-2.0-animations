@@ -141,7 +141,7 @@
     bottom: 0;
     right: 8px;
     transform: translate(0, 25px);
-    background: linear-gradient(to right, #3b3b3b 50%, rgba(198, 16, 15, 1) 50%);
+    background: linear-gradient(to right, rgba(25, 27, 37, 1) 51%, rgba(198, 16, 15, 1) 50%);
     background-size: 200% 100%;
     animation: fillBackground 1s ease forwards paused;
 }
