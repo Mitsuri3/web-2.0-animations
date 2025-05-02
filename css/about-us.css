@@ -289,11 +289,11 @@
     letter-spacing: 0%;
     text-align: center;
     text-transform: uppercase;
-    display: inline-block;
+    
 }
 
 .about-us-our-works-txt{
-    display: inline-block;
+    
     animation: wave 2s infinite alternate cubic-bezier(.83,.01,.38,.97);
 }
   
