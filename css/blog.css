@@ -26,8 +26,34 @@
 }
 
 .blokk{
-    
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgb(18, 20, 29);
+}
+
+.blokk:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(198, 16, 15, 0.2);
+    border-color: rgba(198, 16, 15, 0.3);
+}
+
+.blokk::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+    background: #C6100F;
+    transition: left 0.6s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.blokk:hover::before {
+    left: 0;
 }
 
 .blog-images-block1{
@@ -108,6 +134,77 @@
     letter-spacing: 1px;
     text-align: left;
     text-transform: uppercase;
+}
+
+.blog-botton1, .blog-botton2 {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-botton1::before, 
+.blog-botton2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease;
+}
+
+.blokk:hover .blog-botton1::before,
+.blokk:hover .blog-botton2::before {
+    left: 100%;
+}
+
+.blog-text1, .blog-text2 {
+    transition: transform 0.3s ease;
+}
+
+.blokk:hover .blog-text1,
+.blokk:hover .blog-text2 {
+    transform: translateX(5px);
+}
+
+.read-more {
+    position: relative;
+    display: inline-block;
+}
+
+.read-more::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #C6100F;
+    transition: width 0.3s ease;
+}
+
+.blokk:hover .read-more::after {
+    width: 100%;
+}
+
+/* Дополнительный эффект затемнения */
+.blokk::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.blokk:hover::after {
+    opacity: 1;
 }
 
 @media (max-width: 1025px) {
